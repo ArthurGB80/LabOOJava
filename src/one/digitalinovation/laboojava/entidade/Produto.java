@@ -53,4 +53,6 @@ public abstract class Produto {
      * @return valor do frete para o determinado produto
      */
     //TODO Método de cálculo de frete
+    public abstract double calcularFrete();
+    
 }
