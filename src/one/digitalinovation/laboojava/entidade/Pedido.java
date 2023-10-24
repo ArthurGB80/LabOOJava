@@ -62,4 +62,26 @@ public class Pedido {
         this.total = total;
     }
 
+    public String getProdutosComprados() {
+
+        StringBuilder produtos = new StringBuilder();
+        produtos.append("[");
+        for (Produto produto : getProdutos()) {
+            produtos.append(produto.toString());
+            produtos.append("Qtd: ");
+            produtos.append(produto.getQuantidade());
+            produtos.append(" ");
+        }
+        produtos.append("]");
+
+        return produtos.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido [codigo=" + codigo + ", cliente=" + cliente + ", produtos=" + getProdutosComprados() + ", total="
+                + total
+                + "]";
+    }
+
 }

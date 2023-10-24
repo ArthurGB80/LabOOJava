@@ -30,7 +30,7 @@ public class Caderno extends Produto {
 
     @Override
     public String toString() {
-        return "Caderno [nome=" + nome + ", material=" + material + "]";
+        return "Caderno [nome=" + nome + ", codigo=" + getCodigo() + ", material=" + material + "]";
     }
 
     

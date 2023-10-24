@@ -78,4 +78,8 @@ public class Banco {
     public void removerPedido(int posicao) {
         pedidos.remove(posicao);
     }
+
+    public void adicionarCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 }

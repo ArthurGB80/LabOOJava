@@ -42,7 +42,10 @@ public class ClienteNegocio {
      * Cadastra um novo cliente.
      * @param cliente Novo cliente que terá acesso a aplicação
      */
-    //TODO Fazer a inclusão de cliente
+    public void cadastrarCliente(Cliente cliente) {
+        bancoDados.adicionarCliente(cliente);
+
+    }
 
     /**
      * Exclui um cliente específico.

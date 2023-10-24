@@ -66,8 +66,8 @@ public class PedidoNegocio {
         codigo = String.format(codigo, hoje.getYear(), hoje.getMonthValue(), bancoDados.getPedidos().length);
 
         novoPedido.setCodigo(codigo);
-        
-        novoPedido.setclientes(bancoDados.getclientes());
+
+        novoPedido.setCliente(bancoDados.getCliente());
 
         novoPedido.setTotal(calcularTotal(novoPedido.getProdutos(), cupom));
 

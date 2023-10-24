@@ -15,7 +15,7 @@ import one.digitalinovation.laboojava.utilidade.LeitoraDados;
 
 public class Start {
 
-    private static Cliente clientesLogado = null;
+    private static Cliente clienteLogado = null;
 
     private static Banco banco = new Banco();
 
@@ -106,8 +106,8 @@ public class Start {
                     pedidoNegocio.listarTodos();
                     break;
                 case "9":
-                    System.out.println(String.format("Volte sempre %s!", clientesLogado.getNome()));
-                    clientesLogado = null;
+                    System.out.println(String.format("Volte sempre %s!", clienteLogado.getNome()));
+                    clienteLogado = null;
                     break;
                 case "10":
                     System.out.println("Aplicação encerrada.");
@@ -130,8 +130,8 @@ public class Start {
 
         if (resultado.isPresent()) {
             Cliente cliente = resultado.get();
-            System.out.printf("Olá %s! Você está logado.%n", clientes.getNome());
-            clientesLogado = clientes;
+            System.out.printf("Olá %s! Você está logado.%n", cliente.getNome());
+            clienteLogado = cliente;
         } else {
             System.out.println("Usuário não cadastrado.");
             System.exit(0);
