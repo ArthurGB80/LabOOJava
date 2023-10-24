@@ -13,25 +13,14 @@ import one.digitalinovation.laboojava.negocio.ProdutoNegocio;
 import java.util.Optional;
 import java.util.Scanner;
 
-/**
- * Classe utilitária para auxiliar na leitura de entradas de dados via teclado.
- * @author thiago leite
- */
 public final class LeitoraDados {
 
-	/**
-	 * Classe do Java para manipular entradas via teclado.
-	 */
 	private static Scanner scanner;
 	
 	static {
 		scanner = new Scanner(System.in);
 	}
 
-	/**
-	 * Ler um dado específico
-	 * @return Dado lido
-	 */
 	public static String lerDado() {
 		
 		String texto = scanner.nextLine();
@@ -39,10 +28,6 @@ public final class LeitoraDados {
 		return texto;
 	}
 
-	/**
-	 * Ler os dados do livro a ser cadastrado.
-	 * @return Um livro a partir dos dados de entrada
-	 */
 	public static Livro lerLivro() {
 
 		System.out.println("Cadastrando livro...");
@@ -62,12 +47,6 @@ public final class LeitoraDados {
 
 		return livro;
 	}
-
-	/**
-	 * Ler os dados do caderno a ser cadastrado.
-	 * @return 
-	 */
-	//TODO Método para ler o caderno
 
 	public static Caderno lerCaderno() {
 		
@@ -89,10 +68,6 @@ public final class LeitoraDados {
 
 	}
 
-	/**
-	 * Ler os dados do pedido e retorna um objeto a partir destes.
-	 * @return Um pedido a partir dos dados de entrada
-	 */
 	public static Pedido lerPedido(Banco banco) {
 
 		ProdutoNegocio produtoNegocio = new ProdutoNegocio(banco);
@@ -127,10 +102,6 @@ public final class LeitoraDados {
 		return pedido;
 	}
 
-	/**
-	 * Ler os dados do cupom e retorna um objeto a partir destes.
-	 * @return O cupom a partir dos dados de entrada
-	 */
 	public static Optional<Cupom> lerCupom(Banco banco) {
 
 		System.out.println("Caso queira utilizar algum cupom escolha entre: CUPOM2, CUPOM5, CUPOM7. Se não desejar, deixe em branco.");

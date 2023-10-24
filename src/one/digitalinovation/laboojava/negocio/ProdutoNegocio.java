@@ -5,32 +5,14 @@ import one.digitalinovation.laboojava.entidade.Produto;
 
 import java.util.Optional;
 
-/**
- * Classe para manipular a entidade {@link Produto}.
- * 
- * @author thiago leite
- */
 public class ProdutoNegocio {
 
-    /**
-     * {@inheritDoc}.
-     */
     private Banco bancoDados;
 
-    /**
-     * Construtor.
-     * 
-     * @param banco Banco de dados para ter armazenar e ter acesso os produtos
-     */
     public ProdutoNegocio(Banco banco) {
         this.bancoDados = banco;
     }
 
-    /**
-     * Salva um novo produto(livro ou caderno) na loja.
-     * 
-     * @param novoProduto Livro ou caderno que pode ser vendido
-     */
     public void salvar(Produto novoProduto) {
 
         String codigo = "PR%04d";
@@ -52,11 +34,6 @@ public class ProdutoNegocio {
         }
     }
 
-    /**
-     * Exclui um produto pelo código de cadastro.
-     * 
-     * @param codigo Código de cadastro do produto
-     */
     public void excluir(String codigo) {
 
         Produto[] produtos = bancoDados.getProdutos();
@@ -73,12 +50,6 @@ public class ProdutoNegocio {
         System.out.println("Produto inexistente.");
     }
 
-    /**
-     * Obtem um produto a partir de seu código de cadastro.
-     * 
-     * @param codigo Código de cadastro do produto
-     * @return Optional indicando a existência ou não do Produto
-     */
     public Optional<Produto> consultar(String codigo) {
 
         for (Produto produto : bancoDados.getProdutos()) {
@@ -87,13 +58,9 @@ public class ProdutoNegocio {
                 return Optional.of(produto);
             }
         }
-
         return Optional.empty();
     }
 
-    /**
-     * Lista todos os produtos cadastrados.
-     */
     public void listarTodos() {
 
         if (bancoDados.getProdutos().length == 0) {
